@@ -1,5 +1,4 @@
 * {
-  font-family: "Ubuntu",  sans-serif;
   background-color: #001;
 
   -webkit-transition: all 0.5s ease-in-out;
@@ -11,6 +10,12 @@
 
 body {
   color: white;
+  font-family: "Ubuntu",  sans-serif;
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
 }
 
 ul {
@@ -28,51 +33,57 @@ ul {
   grid-template-columns: 3fr 8fr 3fr;
 }
 
-.logos {
+.logo_block {
   text-align: center;
   grid-column: 1 / span 3;
+  font-size: 0;
+}
+
+.main_block>div {
   padding-bottom: 50px;
 }
 
-.logo {
+.button {
   display: inline-block;
   width: 100px;
   margin: 0;
   padding: 0 20px;
   vertical-align: top;
+  cursor: pointer;
 }
 
-.logo>svg {
+.logo {
   height: 100px;
   width: auto;
   margin: 0;
 }
 
-.logo>p {
+.button>p {
   margin: 0;
+  font-size: 16px;
 }
 
-.aws_logo {
+.button.aws {
   color: #F7A80D;
 }
 
-.c_logo {
+.button.c {
   color: #03599C;
 }
 
-.java_logo {
+.button.java {
   color: #EA2D2E;
 }
 
-.nodejs_logo {
+.button.nodejs {
   color: #83CD29;
 }
 
-.python_logo {
+.button.python {
   color: #FFD845;
 }
 
-.terraform_logo {
+.button.terraform {
   color: #5C4EE5;
 }
 
@@ -81,11 +92,12 @@ ul {
   text-align: right;
 }
 
-.title_cell>p {
-  margin: 0;
-}
-
 .title_cell>svg {
   height: 35px;
   margin: 10px 1px;
+}
+
+.date_cell {
+  padding-left: 30px;
+  text-align: left;
 }

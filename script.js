@@ -21,6 +21,7 @@ const TECHS = {
 
 const COLOR_CONTENT_FOCUS = '#FFFFFF'
 const COLOR_CONTENT_FADED = '#444444'
+let focusSelected = '';
 
 function focus(technology) {
   const fadeableContent = document.querySelectorAll('.fadeable');
@@ -57,14 +58,57 @@ function restore(technology) {
   });
 }
 
+function fadeButtons(technology) {
+  const fadeableButtons = document.querySelectorAll('.button');
+  fadeableButtons.forEach(function(button) {
+    if (Array.from(button.classList).indexOf(technology) === -1) {
+      let path = button.querySelector('path');
+      path.setAttribute('fill', COLOR_CONTENT_FADED);
+      button.style.color = COLOR_CONTENT_FADED;
+    }
+  });
+}
+
+function restoreButtons(technology) {
+  const fadeableButtons = document.querySelectorAll('.button');
+  fadeableButtons.forEach(function(button) {
+    if (Array.from(button.classList).indexOf(technology) === -1) {
+      let buttonTech = Object.keys(TECHS).find((tech) => Array.from(button.classList).indexOf(tech) !== -1);
+      let path = button.querySelector('path');
+      path.setAttribute('fill', TECHS[buttonTech].color);
+      button.style.color = TECHS[buttonTech].color;
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-  Object.keys(TECHS).forEach(function(tech) {
-    logoElement = document.querySelector(`.${[tech]}_logo`);
-    logoElement.addEventListener('mouseenter', function(event) {
-      focus(tech);
+  const buttons = document.querySelectorAll('.button');
+  buttons.forEach(function(button) {
+    const tech = Object.keys(TECHS).find((tech) => Array.from(button.classList).indexOf(tech) !== -1);
+    button.addEventListener('mouseenter', function(event) {
+      if (focusSelected === '') {
+        focus(tech);
+      }
     });
-    logoElement.addEventListener('mouseleave', function(event) {
-      restore(tech);
+    button.addEventListener('mouseleave', function(event) {
+      if (focusSelected === '') {
+        restore(tech);
+      }
+    });
+    button.addEventListener('click', function(event) {
+      if (focusSelected !== '') {
+        restore(focusSelected);
+      }
+
+      if (focusSelected !== tech) {
+        restoreButtons(focusSelected);
+        fadeButtons(tech);
+        focus(tech);
+        focusSelected = tech;
+      } else {
+        restoreButtons(tech);
+        focusSelected = '';
+      }
     });
   });
 });
