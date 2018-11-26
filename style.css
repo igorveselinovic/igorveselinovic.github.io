@@ -1,15 +1,9 @@
-* {
-  background-color: #001;
-
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
 body {
+  background-color: #001;
   color: white;
+  margin: 0;
+  padding: 0;
+
   font-family: "Ubuntu",  sans-serif;
   font-size: 16px;
 }
@@ -28,7 +22,8 @@ ul {
 
 .main_block {
   display: grid;
-  width: 65%;
+  width: 100%;
+  max-width: 1248px;
   margin: auto;
   grid-template-columns: 3fr 8fr 3fr;
 }
@@ -50,6 +45,15 @@ ul {
   padding: 0 20px;
   vertical-align: top;
   cursor: pointer;
+
+}
+
+.button, .logo>path, .fadeable, .fade_svg>path {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .logo {
@@ -94,7 +98,7 @@ ul {
 
 .title_cell>svg {
   height: 35px;
-  margin: 10px 1px;
+  margin: 10px 1px 0 1px;
 }
 
 .date_cell {
