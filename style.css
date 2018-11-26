@@ -93,6 +93,7 @@ ul {
 
 .title_cell {
   padding-right: 30px;
+  padding-left: 10px;
   text-align: right;
 }
 
@@ -102,6 +103,7 @@ ul {
 }
 
 .date_cell {
+  padding-right: 10px;
   padding-left: 30px;
   text-align: left;
 }
