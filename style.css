@@ -39,7 +39,7 @@ ul {
 }
 
 .logo_block {
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .title_cell, .bullet_points_cell, .date_cell {
@@ -50,7 +50,7 @@ ul {
   display: inline-block;
   width: 140px;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 20px 10px 20px;
   vertical-align: top;
   cursor: pointer;
 }
