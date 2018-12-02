@@ -12,6 +12,10 @@ body {
   font-size: 16px;
 }
 
+h1 {
+  font-size: 36px;
+}
+
 p {
   margin: 0;
 }
@@ -25,21 +29,35 @@ ul {
 }
 
 .main_block {
-  display: grid;
   width: 100%;
   max-width: 1248px;
   margin: auto;
+}
+
+.experience_block {
+  display: grid;
   grid-template-columns: 3fr 8fr 3fr;
+  padding-top: 20px;
+}
+
+.experience_header {
+  grid-column: 1 / span 3;
+  padding-bottom: 30px;
+}
+
+.experience_header>h2 {
+  border-bottom: solid white 1px;
+  margin: 0 10px;
 }
 
 .logo_block {
-  text-align: center;
   grid-column: 1 / span 3;
   font-size: 0;
+  text-align: center;
 }
 
 .logo_block {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 .title_cell, .bullet_points_cell, .date_cell {
@@ -98,6 +116,12 @@ ul {
   color: #5C4EE5;
 }
 
+.section_header {
+  grid-column: 1 / span 3;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
 .title_cell {
   padding-right: 30px;
   padding-left: 10px;
@@ -120,7 +144,7 @@ ul {
 }
 
 @media only screen and (max-width: 1024px) {
-  .main_block {
+  .experience_block {
     display: block;
   }
 
