@@ -53,7 +53,6 @@ ul {
   padding: 0 20px;
   vertical-align: top;
   cursor: pointer;
-
 }
 
 .button, .logo>path, .fadeable, .fade_svg>path {
@@ -108,6 +107,10 @@ ul {
 .title_cell>svg {
   height: 35px;
   margin: 10px 1px 0 1px;
+}
+
+.bullet_points_cell {
+  padding-right: 30px;
 }
 
 .date_cell {
