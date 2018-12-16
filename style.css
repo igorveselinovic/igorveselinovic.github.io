@@ -24,14 +24,23 @@ ul {
   margin: 0;
 }
 
+.top_level_block {
+  max-width: 1248px;
+  margin: auto;
+}
+
 .title_block {
   text-align: center;
 }
 
-.main_block {
-  width: 100%;
-  max-width: 1248px;
-  margin: auto;
+.profile_links_block {
+  text-align: right;
+  padding: 0 20px;
+}
+
+.profile_logo {
+  width: 48px;
+  height: 48px;
 }
 
 .experience_block {
