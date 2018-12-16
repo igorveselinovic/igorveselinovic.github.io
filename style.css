@@ -24,6 +24,10 @@ ul {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .top_level_block {
   max-width: 1248px;
   margin: auto;
@@ -41,6 +45,7 @@ ul {
 .profile_logo {
   width: 48px;
   height: 48px;
+  margin-left: 10px;
 }
 
 .experience_block {
