@@ -5,8 +5,14 @@ const TECHS = {
   c: {
     color: '#03599C'
   },
+  go: {
+    color: '#00ADD8'
+  },
   java: {
     color: '#EA2D2E'
+  },
+  javascript: {
+    color: '#DA1884'
   },
   nodejs: {
     color: '#83CD29'

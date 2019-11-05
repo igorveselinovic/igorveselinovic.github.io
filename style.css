@@ -114,8 +114,16 @@ a {
   color: #03599C;
 }
 
+.button.go {
+  color: #00ADD8;
+}
+
 .button.java {
   color: #EA2D2E;
+}
+
+.button.javascript {
+  color: #DA1884;
 }
 
 .button.nodejs {
