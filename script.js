@@ -27,10 +27,13 @@ const TECHS = {
 
 function toggleSidebar() {
   const sidebar = document.querySelector('.sidebar');
-  if (sidebar.style.width === '60px') {
-    sidebar.style.width = '350px';
-  } else {
+  const collapse = document.querySelector('.sidebar_collapse');
+  if (sidebar.style.width === '350px') {
     sidebar.style.width = '60px';
+    collapse.style.display = "none";
+  } else {
+    sidebar.style.width = '350px';
+    collapse.style.display = "block";
   }
 }
 
