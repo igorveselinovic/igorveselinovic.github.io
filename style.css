@@ -312,6 +312,7 @@ a {
   .sidebar {
     position: fixed;
     height: 100%;
+    right: 0;
   }
 
   .content {
