@@ -25,6 +25,11 @@ const TECHS = {
   }
 }
 
+const COLOR_CONTENT_FOCUS = '#dddddd'
+const COLOR_CONTENT_FADED = '#555555'
+
+let focusSelected = '';
+
 function toggleSidebar() {
   const sidebar = document.querySelector('.sidebar');
   if (sidebar.style.width === '350px') {
@@ -33,10 +38,6 @@ function toggleSidebar() {
     sidebar.style.width = '350px';
   }
 }
-
-const COLOR_CONTENT_FOCUS = '#dddddd'
-const COLOR_CONTENT_FADED = '#555555'
-let focusSelected = '';
 
 function focus(technology) {
   const fadeableContent = document.querySelectorAll('.fadeable');
