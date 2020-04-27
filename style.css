@@ -295,5 +295,14 @@ a {
 
   .title_cell, .bullet_points_cell {
     padding-bottom: 20px;
-  };
+  }
+
+  .sidebar {
+    position: fixed;
+    height: 100%;
+  }
+
+  .content {
+    padding-right: 60px;
+  }
 }
