@@ -20,6 +20,9 @@ const TECHS = {
   python: {
     color: '#FFD845'
   },
+  snowflake: {
+    color: '#29B5E8'
+  },
   terraform: {
     color: '#5C4EE5'
   }
