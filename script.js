@@ -2,6 +2,9 @@ const TECHS = {
   aws: {
     color: '#F7A80D'
   },
+  azure: {
+    color: '#0089D6'
+  },
   c: {
     color: '#03599C'
   },
