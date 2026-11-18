@@ -8,6 +8,9 @@ const TECHS = {
   c: {
     color: '#03599C'
   },
+  dbt: {
+    color: '#FF694A'
+  },
   go: {
     color: '#00ADD8'
   },
