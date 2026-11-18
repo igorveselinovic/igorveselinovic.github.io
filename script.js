@@ -65,8 +65,10 @@ function focus(technology) {
   const fadeableSVGs = document.querySelectorAll('.fade_svg');
   fadeableSVGs.forEach(function(svg) {
     if (Array.from(svg.classList).indexOf(technology) === -1) {
-      let path = svg.querySelector('path');
-      path.setAttribute('fill', COLOR_CONTENT_FADED);
+      let pathElements = svg.querySelectorAll('path');
+      pathElements.forEach((path) => {
+        path.setAttribute('fill', COLOR_CONTENT_FADED);
+      })
     }
   });
 }
@@ -83,8 +85,10 @@ function restore(technology) {
   fadeableSVGs.forEach(function(svg) {
     if (Array.from(svg.classList).indexOf(technology) === -1) {
       let svgTech = Object.keys(TECHS).find((tech) => Array.from(svg.classList).indexOf(tech) !== -1);
-      let path = svg.querySelector('path');
-      path.setAttribute('fill', TECHS[svgTech].color);
+      let pathElements = svg.querySelectorAll('path');
+      pathElements.forEach((path) => {
+        path.setAttribute('fill', TECHS[svgTech].color);
+      })
     }
   });
 }
@@ -93,8 +97,10 @@ function fadeButtons(technology) {
   const fadeableButtons = document.querySelectorAll('.button');
   fadeableButtons.forEach(function(button) {
     if (Array.from(button.classList).indexOf(technology) === -1) {
-      let path = button.querySelector('path');
-      path.setAttribute('fill', COLOR_CONTENT_FADED);
+      let pathElements = button.querySelectorAll('path');
+      pathElements.forEach((path) => {
+        path.setAttribute('fill', COLOR_CONTENT_FADED);
+      })
       button.style.color = COLOR_CONTENT_FADED;
     }
   });
@@ -105,8 +111,10 @@ function restoreButtons(technology) {
   fadeableButtons.forEach(function(button) {
     if (Array.from(button.classList).indexOf(technology) === -1) {
       let buttonTech = Object.keys(TECHS).find((tech) => Array.from(button.classList).indexOf(tech) !== -1);
-      let path = button.querySelector('path');
-      path.setAttribute('fill', TECHS[buttonTech].color);
+      let pathElements = button.querySelectorAll('path');
+      pathElements.forEach((path) => {
+        path.setAttribute('fill', TECHS[buttonTech].color);
+      })
       button.style.color = TECHS[buttonTech].color;
     }
   });
