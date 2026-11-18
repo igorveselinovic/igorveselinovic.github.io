@@ -11,6 +11,9 @@ const TECHS = {
   dbt: {
     color: '#FF694A'
   },
+  gcp: {
+    color: '#4285F4'
+  },
   go: {
     color: '#00ADD8'
   },
