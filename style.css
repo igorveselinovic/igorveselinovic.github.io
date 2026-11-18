@@ -302,6 +302,10 @@ a {
   color: #29B5E8;
 }
 
+.button.sql {
+  color: #93C572;
+}
+
 .button.terraform {
   color: #5C4EE5;
 }

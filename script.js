@@ -26,6 +26,9 @@ const TECHS = {
   snowflake: {
     color: '#29B5E8'
   },
+  sql: {
+    color: '#93C572'
+  },
   terraform: {
     color: '#5C4EE5'
   }
