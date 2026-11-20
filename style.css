@@ -87,6 +87,16 @@ a {
   opacity: 0.6;
 }
 
+.professional_summary_header>h2 {
+  margin: 10px;
+
+  border-bottom: solid #dddddd 1px;
+}
+
+.professional_summary_text {
+  margin: 10px;
+}
+
 .experience_block {
   display: grid;
   grid-template-columns: 3fr 8fr 3fr;
